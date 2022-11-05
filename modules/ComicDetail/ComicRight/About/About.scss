@@ -1,0 +1,102 @@
+.comic-detail_right-about {
+  min-height: 320px;
+  background-color: var(--color-primary);
+  border-radius: 8px;
+  padding: 24px;
+
+  &--title {
+    @include textFont(var(--color-bali-hai-85), 20px, 500);
+  }
+
+  &--content {
+    margin-top: 14px;
+    .genes {
+      .tag {
+        @include textFont(var(--color-bali-hai-65), 12px, 400);
+        border: 1px solid #434343;
+        border-radius: 4px;
+      }
+    }
+
+    .summary {
+      .description {
+        @include textFont(var(--color-bali-hai-65), 14px, 400);
+        @include text-truncate(4);
+      }
+
+      .description-more {
+        @include text-truncate(10);
+
+        .images-summary {
+          width: 100%;
+          height: auto;
+          display: grid;
+          grid-gap: 5px;
+          grid-template-rows: repeat(1, 126px);
+          grid-template-columns: repeat(auto-fit, minmax(84.2px, 1fr));
+        }
+      }
+    }
+
+    .credits {
+      .content > div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .content {
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .author {
+            @include textFont(var(--color-bali-hai-85), 14px, 400);
+          }
+          .title {
+            @include textFont(var(--color-bali-hai-45), 12px, 400);
+          }
+        }
+      }
+    }
+
+    .facts {
+      .content {
+        &--item {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          .fact-title {
+            flex: 0.5;
+            @include textFont(var(--color-bali-hai-45), 14px, 400);
+          }
+          .fact-content {
+            flex: 1.5;
+            @include textFont(var(--color-bali-hai-85), 14px, 400);
+            &::before {
+              content: ":";
+              padding-right: 8px;
+            }
+          }
+        }
+      }
+    }
+
+    :is(.genes > .title, .summary > .title, .credits > .title, .facts
+        > .title) {
+      @include textFont(var(--color-bali-hai-85), 16px, 500);
+      margin-bottom: 8.05px;
+    }
+
+    :is(.genes, .summary, .credits, .facts) {
+      margin-bottom: 22px;
+    }
+  }
+
+  &--show-more {
+    margin-top: 17.08px;
+    text-align: center;
+    cursor: pointer;
+    @include textFont(var(--color-bali-hai-65), 14px, 400);
+  }
+}

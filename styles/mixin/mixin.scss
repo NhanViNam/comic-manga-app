@@ -47,3 +47,12 @@
   height: $height;
   border-radius: 50%;
 }
+
+@mixin text-truncate($line-break: 4) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-break;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}

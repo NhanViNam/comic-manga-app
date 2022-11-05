@@ -5,6 +5,7 @@ import ComicRight from "./ComicRight/ComicRight";
 import Banner from "./ComicLeft/Banner/Banner";
 import PricingAndPromotion from "./ComicLeft/PricingAndPromotion/PricingAndPromotion";
 import Chapters from "./ComicLeft/Chapters/Chapters";
+import About from "./ComicRight/About/About";
 
 export declare type typeIcon = "like" | "read" | "none";
 
@@ -35,23 +36,34 @@ const data: bannerType = {
 };
 
 const prefix = "comic-detail";
+const prefixLeft = `${prefix}_left`;
+const prefixRight = `${prefix}_right`;
 const ComicDetail = () => {
-  const renderBanner = (
-    <Banner dataBanner={data} className={`${prefix}_left`} />
-  );
-  const renderPricing = <PricingAndPromotion className={`${prefix}_left`} />;
+  /**
+   * Comic Left
+   */
+  const renderBanner = <Banner className={prefixLeft} dataBanner={data} />;
+  const renderPricing = <PricingAndPromotion className={prefixLeft} />;
+  const renderChapters = <Chapters className={prefixLeft} />;
 
-  const renderChapters = <Chapters className={`${prefix}_left`} />;
+  /**
+   * Comic Right
+   */
+  const renderAbout = <About className={prefixRight} />;
 
   return (
     <section className={prefix}>
-      <ComicLeft
-        className={prefix}
-        banner={renderBanner}
-        pricing={renderPricing}
-        chapters={renderChapters}
-      />
-      <ComicRight />
+      <div className={prefixLeft}>
+        <ComicLeft
+          banner={renderBanner}
+          pricing={renderPricing}
+          chapters={renderChapters}
+        />
+      </div>
+
+      <div className={prefixRight}>
+        <ComicRight about={renderAbout} />
+      </div>
     </section>
   );
 };

@@ -1,0 +1,10 @@
+@import "./About/About.scss";
+@import "./Related/Related.scss";
+@import "./Comments/Comments.scss";
+@import "./Connect/Connect.scss";
+
+.comic-detail_right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 
-const ComicRight = () => {
-  return <div>ComicRight</div>;
+declare interface ComicRightProps {
+  about: JSX.Element;
+}
+const ComicRight: FC<ComicRightProps> = ({ about }) => {
+  return <>{about}</>;
 };
 
 export default ComicRight;
