@@ -1,0 +1,63 @@
+.chapter-card {
+  .card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--left {
+      display: flex;
+      align-items: center;
+      .images {
+        width: 78px;
+        height: 62px;
+        position: relative;
+
+        .icon-lock {
+          background: var(--color-white);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.45);
+          @include circle(28px, 28px);
+          @include absolute(left 30% top 30%);
+        }
+
+        .progress {
+          width: 100%;
+          height: 4px;
+
+          @include absolute(bottom 0);
+          .outer {
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-black);
+            border-radius: 0px 0px 4px 4px;
+          }
+
+          .inner {
+            height: 100%;
+            background-color: #ffd60a;
+            border-radius: 0px 4px 4px 0px;
+            transform: matrix(1, 0, 0, -1, 0, 0);
+            transition: width 0.4s ease-in-out;
+          }
+        }
+      }
+
+      .images-lock {
+        opacity: 0.6;
+        background: rgba(0, 0, 0, 0.3);
+      }
+
+      .info {
+        .title {
+          @include textFont(var(--color-bali-hai-65), 14px, 400);
+        }
+        .date-read {
+          @include textFont(var(--color-bali-hai-45), 12px, 400);
+        }
+      }
+    }
+    &--right {
+      .price {
+        @include textFont(var(--color-bali-hai-65), 14px, 500);
+      }
+    }
+  }
+}

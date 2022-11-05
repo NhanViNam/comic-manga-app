@@ -93,7 +93,16 @@ const PricingAndPromotion: FC<PricingProps> = ({ className }) => {
     return (
       <div className="saving">
         <div className="saving--left">
-          <div className="title">Save money with INKR Extra</div>
+          <div className="title">
+            Save money with INKR Extra
+            <Image
+              width={18}
+              height={18}
+              alt="coin"
+              src={Currency}
+              className="mb-6 ml-4"
+            />
+          </div>
           <div className="subtitle">
             Instant access to all chapters • No Ad • Extra saving
           </div>

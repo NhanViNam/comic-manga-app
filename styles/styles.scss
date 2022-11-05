@@ -1,5 +1,6 @@
-@import "./base/base-common-margin.scss";
+@import "./base/base.scss";
 @import "./mixin/mixin.scss";
+@import "./component-syles/component-styles.scss";
 @import "./module-styles/module-styles.scss";
 
 :root {
@@ -11,6 +12,7 @@
   --color-bali-hai-45: rgba(255, 255, 255, 0.45);
   --color-mine-shaft: #1f1f1f;
   --color-purple: #a379ff;
+  --color-code-gray: #141414;
 }
 
 .flex-center {
@@ -18,10 +20,6 @@
   justify-content: center;
   align-items: center;
 }
-
-// .mr-2 {
-//   margin-right: 4px;
-// }
 
 .comic-detail-page {
   background-color: var(--color-black);

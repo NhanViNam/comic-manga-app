@@ -1,77 +1,61 @@
-$sizeMPs: 24, 22, 20, 18, 17, 16, 15, 14, 12, 11, 10, 9, 8, 6, 7, 5, 4, 3, 2, 1,
+$sizeMPs: 28, 26, 24, 20, 19, 18, 16, 15, 13, 12, 11, 10, 9, 8, 6, 7, 5, 4, 3, 2,
   0;
 
-.m {
-  &-0 {
-    margin: 0;
-  }
-  &-auto {
-    margin: 0 auto;
-  }
-  &l-auto {
-    margin-left: auto;
-  }
-  &r-auto {
-    margin-right: auto;
-  }
+.p {
   @each $sizeMP in $sizeMPs {
     $val: #{$sizeMP}px;
     &-#{$sizeMP} {
-      margin: $val;
+      padding: $val;
     }
   }
-
   @each $sizeMP in $sizeMPs {
     $val: #{$sizeMP}px;
     &y-#{$sizeMP} {
-      margin-top: $val;
-      margin-bottom: $val;
+      padding-top: $val;
+      padding-bottom: $val;
     }
   }
-
   @each $sizeMP in $sizeMPs {
     $val: #{$sizeMP}px;
     &x-#{$sizeMP} {
-      margin-left: $val;
-      margin-right: $val;
+      padding-left: $val;
+      padding-right: $val;
     }
   }
-
   @each $sizeMP in $sizeMPs {
     $val: #{$sizeMP}px;
     &t-#{$sizeMP} {
-      margin-top: $val;
+      padding-top: $val;
     }
   }
-
   @each $sizeMP in $sizeMPs {
     $val: #{$sizeMP}px;
     &b-#{$sizeMP} {
-      margin-bottom: $val;
+      padding-bottom: $val;
     }
   }
-
   @each $sizeMP in $sizeMPs {
     $val: #{$sizeMP}px;
     &r-#{$sizeMP} {
-      margin-right: $val;
+      padding-right: $val;
     }
   }
-
   @each $sizeMP in $sizeMPs {
     $val: #{$sizeMP}px;
     &l-#{$sizeMP} {
-      margin-left: $val;
+      padding-left: $val;
     }
   }
-
   &b-0 {
-    margin-bottom: 0;
+    padding-bottom: 0;
   }
   &t-0 {
-    margin-top: 0;
+    padding-top: 0;
+  }
+  &l-0 {
+    padding-left: 0 !important;
   }
   &r-0 {
-    margin-right: 0;
+    padding-right: 0;
   }
 }

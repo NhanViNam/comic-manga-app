@@ -63,7 +63,7 @@
         background: rgba(255, 255, 255, 0.08);
         border-radius: 8px;
         .num {
-          @include textFont(rgba(255, 255, 255, 0.85), 16px, 700);
+          @include textFont(var(--color-bali-hai-85), 16px, 700);
         }
       }
     }
