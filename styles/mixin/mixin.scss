@@ -1,0 +1,19 @@
+@mixin textFont(
+  $color,
+  $font-size,
+  $font-weight: null,
+  $font-family: null,
+  $font-style: null
+) {
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-style: $font-style;
+  font-family: $font-family;
+  @if ($font-style == null) {
+    font-style: normal;
+  }
+  @if ($font-family == null) {
+    font-family: "Roboto";
+  }
+}

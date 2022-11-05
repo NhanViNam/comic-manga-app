@@ -18,7 +18,9 @@ const DynamicComicModule = dynamic(
 export default function ComicPage(props: ComicPageProps) {
   return (
     <Suspense fallback={`Loading...`}>
-      <DynamicComicModule />
+      <div className="comic-detail-page">
+        <DynamicComicModule />
+      </div>
     </Suspense>
   );
 }

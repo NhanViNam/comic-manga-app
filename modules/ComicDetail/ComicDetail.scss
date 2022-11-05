@@ -1,0 +1,21 @@
+@import "./ComicLeft/ComicLeft.scss";
+
+.comic-detail {
+  @media only screen and (min-width: 992px) {
+    width: 960px;
+    height: 100%;
+    padding: 27px 0;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 15fr 9fr;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 1168px;
+    grid-template-columns: 16fr 8fr;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    width: 1568px;
+  }
+}

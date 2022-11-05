@@ -1,0 +1,22 @@
+@import "./mixin/mixin.scss";
+@import "./module-styles/module-styles.scss";
+
+:root {
+  --color-black: black;
+  --color-white: white;
+  --color-primary: #141414;
+  --color-bali-hai-65: rgba(255, 255, 255, 0.65);
+  --color-bali-hai-85: rgba(255, 255, 255, 0.85);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comic-detail-page {
+  background-color: var(--color-black);
+  min-width: 100vw;
+  min-height: 100vh;
+}

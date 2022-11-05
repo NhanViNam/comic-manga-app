@@ -2,6 +2,7 @@ const path = require("path");
 const aliases = {
   "@modules": path.join(__dirname, "./modules"),
   "@components": path.join(__dirname, "./components"),
+  "@styles": path.join(__dirname, "./styles"),
 };
 
 /** @type {import('next').NextConfig} */
