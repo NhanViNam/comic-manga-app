@@ -8,13 +8,14 @@ interface Chapters {
   className: string;
 }
 
+export declare type statusType = "ACTIVITED" | "LOCKED";
 export declare interface ChapterType {
   url: string;
   title: string;
   readDate: string;
   price?: number;
   isRead: boolean;
-  status: "ACTIVITED" | "LOCKED";
+  status: statusType;
 }
 
 const Chapters: FC<Chapters> = ({ className }) => {

@@ -1,0 +1,32 @@
+.related-card {
+  &_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .url-images {
+      width: 80px;
+      height: 120px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .info-related {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      .title {
+        @include textFont(var(--color-bali-hai-85), 16px, 500);
+      }
+      .exclusive {
+        @include textFont(var(--color-purple), 14px, 500);
+      }
+      .category,
+      .totalView {
+        @include textFont(var(--color-bali-hai-45), 14px, 400);
+      }
+    }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 16px 0;
+  }
+}

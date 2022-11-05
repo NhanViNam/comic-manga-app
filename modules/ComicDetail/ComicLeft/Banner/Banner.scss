@@ -2,8 +2,8 @@
   background-color: var(--color-primary);
 
   width: 100%;
-  height: 100%;
-  padding: 24px 24px;
+  min-height: 320px;
+  padding: 24px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
@@ -55,12 +55,7 @@
           flex-wrap: nowrap;
 
           .tag {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            border: 1px solid #434343;
+            border: 1px solid var(--color-tundora);
             padding: 0 8px;
             border-radius: 4px;
             height: 22px;
@@ -106,7 +101,7 @@
         padding: 8px;
         flex-direction: row;
         color: var(--color-bali-hai-65);
-        border: 1px solid #434343;
+        border: 1px solid var(--color-tundora);
         background-color: #1f1f1f;
 
         box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.016);

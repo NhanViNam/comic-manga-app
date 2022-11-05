@@ -1,0 +1,10 @@
+.comic-detail_right-related {
+  min-height: 535px;
+  background-color: var(--color-primary);
+  border-radius: 8px;
+  padding: 24px;
+  margin-top: 24px;
+  &--title {
+    @include textFont(var(--color-bali-hai-85), 20px, 500);
+  }
+}

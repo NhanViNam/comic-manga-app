@@ -4,6 +4,7 @@ import { ChapterType } from "@modules/ComicDetail/ComicLeft/Chapters/Chapters";
 import { LockOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import Coin from "public/images/Coin.svg";
+import PropTypes from "prop-types";
 
 declare type modeCardType = "RELEASE" | "LAST_READ";
 
@@ -97,3 +98,19 @@ const ChapterCard: FC<ChapterCardProps> = ({
 };
 
 export default ChapterCard;
+ChapterCard.propTypes = {
+  className: PropTypes.string,
+  modeCard: PropTypes.oneOf<modeCardType>(["LAST_READ", "RELEASE"]).isRequired,
+  // chapter: PropTypes.shape({
+  //   url: PropTypes.string,
+  //   title: PropTypes.string,
+  //   readDate: PropTypes.string,
+  //   price: PropTypes.number,
+  //   isRead: PropTypes.bool,
+  //   status: PropTypes.oneOf<statusType>(["LOCKED", "ACTIVITED"]),
+  // }).isRequired,
+};
+
+ChapterCard.defaultProps = {
+  className: "",
+};

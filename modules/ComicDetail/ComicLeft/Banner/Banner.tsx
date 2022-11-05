@@ -66,7 +66,7 @@ const Banner: FC<BannerProps> = ({ dataBanner, className }) => {
   const renderTags = () => {
     if (isEmpty(tags)) return;
     return tags.map((tag, index) => (
-      <div className="tag" key={`${tag}-${index}`}>
+      <div className="tag flex-center" key={`${tag}-${index}`}>
         {tag}
       </div>
     ));
