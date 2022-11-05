@@ -3,6 +3,7 @@ import ComicLeft from "./ComicLeft/ComicLeft";
 import ComicRight from "./ComicRight/ComicRight";
 
 import Banner from "./ComicLeft/Banner/Banner";
+import PricingAndPromotion from "./ComicLeft/PricingAndPromotion/PricingAndPromotion";
 
 export declare type typeIcon = "like" | "read" | "none";
 
@@ -34,11 +35,18 @@ const data: bannerType = {
 
 const prefix = "comic-detail";
 const ComicDetail = () => {
-  const renderBanner = <Banner dataBanner={data} />;
+  const renderBanner = (
+    <Banner dataBanner={data} className={`${prefix}_left`} />
+  );
+  const renderPricing = <PricingAndPromotion className={`${prefix}_left`} />;
 
   return (
     <section className={prefix}>
-      <ComicLeft className={prefix} banner={renderBanner} />
+      <ComicLeft
+        className={prefix}
+        banner={renderBanner}
+        pricing={renderPricing}
+      />
       <ComicRight />
     </section>
   );

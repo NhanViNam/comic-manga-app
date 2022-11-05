@@ -19,6 +19,7 @@ declare type actionstype = {
 
 declare interface BannerProps {
   dataBanner: bannerType;
+  className: string;
 }
 
 const iconsActions: actionstype[] = [
@@ -34,7 +35,8 @@ const iconsActions: actionstype[] = [
   },
 ];
 
-const Banner: FC<BannerProps> = ({ dataBanner }) => {
+const Banner: FC<BannerProps> = ({ dataBanner, className }) => {
+  const _prefix = `${className}-banner`;
   const { title, author, category, totalChaper, reactions, tags } =
     dataBanner ?? {};
 
@@ -85,7 +87,7 @@ const Banner: FC<BannerProps> = ({ dataBanner }) => {
   };
 
   return (
-    <>
+    <section className={_prefix}>
       <Image alt="banner_image" src={BgImage} width={180} height={272} />
       <div className="banner-info">
         <div className="banner-info--left">
@@ -107,7 +109,7 @@ const Banner: FC<BannerProps> = ({ dataBanner }) => {
 
         <div className="banner-info--right">{renderActions()}</div>
       </div>
-    </>
+    </section>
   );
 };
 

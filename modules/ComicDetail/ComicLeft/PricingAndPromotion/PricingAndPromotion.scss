@@ -1,0 +1,121 @@
+.comic-detail_left-pricing {
+  margin-top: 24px;
+  background-color: var(--color-primary);
+  padding: 24px;
+  border-radius: 8px;
+
+  &--title {
+    @include textFont(var(--color-bali-hai-85), 20px, 500);
+  }
+
+  &--content {
+    margin-top: 16px;
+    .top {
+      .item .title {
+        @include textFont(var(--color-bali-hai-45), 14px, 400);
+      }
+      .item .des {
+        @include textFont(var(--color-bali-hai-85), 16px, 500);
+      }
+      .free,
+      .locked {
+        width: 50%;
+        background-color: var(--color-mine-shaft);
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .free {
+        margin-right: 2px;
+        margin-bottom: 2px;
+      }
+
+      .locked {
+        .des {
+          div {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    .total-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background-color: var(--color-mine-shaft);
+      padding: 16px;
+
+      &--left {
+        .title {
+          @include textFont(var(--color-bali-hai-85), 16px, 500);
+        }
+        .subtitle {
+          @include textFont(var(--color-bali-hai-45), 14px, 500);
+        }
+      }
+      &--right {
+        width: 71px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        .num {
+          @include textFont(rgba(255, 255, 255, 0.85), 16px, 700);
+        }
+      }
+    }
+
+    .saving {
+      background-color: var(--color-mine-shaft);
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &--left {
+        .title {
+          @include textFont(var(--color-purple), 16px, 500);
+        }
+        .subtitle {
+          @include textFont(var(--color-bali-hai-45), 14px, 400);
+        }
+      }
+      &--right {
+        .warning {
+          @include textFont(var(--color-bali-hai-45), 12px, 400, italic);
+          text-align: right;
+        }
+        .price {
+          .discount {
+            width: 60px;
+            height: 40px;
+            background: #651fff;
+            border-radius: 8px 0px 0px 8px;
+            @include textFont(var(--color-bali-hai-85), 20px, 500);
+          }
+          .new-price {
+            width: 89px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 0px 8px 8px 0px;
+            span {
+              @include textFont(rgba(255, 255, 255, 0.3), 12px, 400);
+              text-decoration-line: line-through;
+            }
+
+            .total {
+              @include textFont(var(--color-bali-hai-85), 16px, 500);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--question {
+    text-align: center;
+    @include textFont(var(--color-bali-hai-45), 14px, 400);
+  }
+}
