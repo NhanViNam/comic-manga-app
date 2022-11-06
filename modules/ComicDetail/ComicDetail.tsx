@@ -8,6 +8,7 @@ import Chapters from "./ComicLeft/Chapters/Chapters";
 import About from "./ComicRight/About/About";
 import Related from "./ComicRight/Related/Related";
 import Comments from "./ComicRight/Comments/Comments";
+import Connect from "./ComicRight/Connect/Connect";
 
 export declare type typeIcon = "like" | "read" | "none";
 
@@ -54,6 +55,7 @@ const ComicDetail = () => {
   const renderAbout = <About className={prefixRight} />;
   const renderRelated = <Related className={prefixRight} />;
   const renderComments = <Comments className={prefixRight} />;
+  const renderConnect = <Connect className={prefixRight} />;
 
   return (
     <section className={prefix}>
@@ -70,6 +72,7 @@ const ComicDetail = () => {
           about={renderAbout}
           related={renderRelated}
           comments={renderComments}
+          connect={renderConnect}
         />
       </div>
     </section>

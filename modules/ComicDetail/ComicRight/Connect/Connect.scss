@@ -1,0 +1,40 @@
+.comic-detail_right-connect {
+  min-height: 146px;
+  background-color: var(--color-primary);
+  border-radius: 8px;
+  padding: 24px;
+  margin-top: 24px;
+  &--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+      .title {
+        @include textFont(var(--color-bali-hai-85), 16px, 500);
+      }
+      .subtitle {
+        @include textFont(var(--color-bali-hai-65), 14px, 400);
+        opacity: 0.8;
+        width: 320px;
+      }
+    }
+
+    .right {
+      width: 116px;
+      height: 116px;
+      min-width: 116px;
+      min-height: 116px;
+
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+
+      box-sizing: border-box;
+      background-size: auto auto;
+
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
