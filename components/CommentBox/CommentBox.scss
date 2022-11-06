@@ -1,0 +1,49 @@
+.comment-box {
+  &-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .avatar {
+      flex-shrink: 1;
+    }
+
+    .info {
+      flex: 1;
+      &--title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .user-name {
+          @include textFont(var(--color-bali-hai-45), 12px, 400);
+        }
+        .create-date {
+          @include textFont(var(--color-tundora), 11px, 400);
+        }
+      }
+
+      &--message {
+        @include textFont(var(--color-bali-hai-85), 14px, 400);
+      }
+
+      &--preview {
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+
+        .icon {
+          color: var(--color-bali-hai-85);
+        }
+
+        .content {
+          @include textFont(var(--color-bali-hai-45), 12px, 400);
+        }
+
+        .action {
+          cursor: pointer;
+          @include textFont(var(--color-bali-hai-45), 14px, 500);
+        }
+      }
+    }
+  }
+}

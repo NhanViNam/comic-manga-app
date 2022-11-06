@@ -32,7 +32,7 @@
 
           .inner {
             height: 100%;
-            background-color: #ffd60a;
+            background-color: var(--color-gold);
             border-radius: 0px 4px 4px 0px;
             transform: matrix(1, 0, 0, -1, 0, 0);
             transition: width 0.4s ease-in-out;

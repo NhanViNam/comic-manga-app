@@ -7,6 +7,7 @@ import PricingAndPromotion from "./ComicLeft/PricingAndPromotion/PricingAndPromo
 import Chapters from "./ComicLeft/Chapters/Chapters";
 import About from "./ComicRight/About/About";
 import Related from "./ComicRight/Related/Related";
+import Comments from "./ComicRight/Comments/Comments";
 
 export declare type typeIcon = "like" | "read" | "none";
 
@@ -52,6 +53,7 @@ const ComicDetail = () => {
    */
   const renderAbout = <About className={prefixRight} />;
   const renderRelated = <Related className={prefixRight} />;
+  const renderComments = <Comments className={prefixRight} />;
 
   return (
     <section className={prefix}>
@@ -64,7 +66,11 @@ const ComicDetail = () => {
       </div>
 
       <div className={prefixRight}>
-        <ComicRight about={renderAbout} related={renderRelated} />
+        <ComicRight
+          about={renderAbout}
+          related={renderRelated}
+          comments={renderComments}
+        />
       </div>
     </section>
   );
