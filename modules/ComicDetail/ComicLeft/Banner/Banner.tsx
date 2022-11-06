@@ -1,4 +1,3 @@
-import { bannerType, typeIcon } from "@modules/ComicDetail/ComicDetail";
 import { isEmpty } from "lodash";
 import Image from "next/image";
 import React, { FC } from "react";
@@ -10,6 +9,22 @@ import {
   MoreOutlined,
 } from "@ant-design/icons";
 
+declare type typeIcon = "like" | "read" | "none";
+
+declare type reactType = {
+  type: typeIcon;
+  count: string | number;
+};
+
+declare type bannerType = {
+  title: string;
+  author: string;
+  category: string;
+  totalChaper: number;
+  reactions: Array<reactType>;
+  tags: Array<string>;
+};
+
 declare type typeAction = "share" | "more";
 declare type actionstype = {
   type: typeAction;
@@ -18,9 +33,20 @@ declare type actionstype = {
 };
 
 declare interface BannerProps {
-  dataBanner: bannerType;
   className: string;
 }
+
+const dataBanner: bannerType = {
+  title: "Kasane",
+  author: "By Kodansha",
+  category: "Drama",
+  totalChaper: 10,
+  reactions: [
+    { type: "read", count: "74.483" },
+    { type: "like", count: "15,863" },
+  ],
+  tags: ["18", "NEW", "TRENDING", "BESTSELLER", "MANGA"],
+};
 
 const iconsActions: actionstype[] = [
   {
@@ -35,7 +61,7 @@ const iconsActions: actionstype[] = [
   },
 ];
 
-const Banner: FC<BannerProps> = ({ dataBanner, className }) => {
+const Banner: FC<BannerProps> = ({ className }) => {
   const _prefix = `${className}-banner`;
   const { title, author, category, totalChaper, reactions, tags } =
     dataBanner ?? {};

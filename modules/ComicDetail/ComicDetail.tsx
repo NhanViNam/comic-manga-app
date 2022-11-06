@@ -1,42 +1,15 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import ComicLeft from "./ComicLeft/ComicLeft";
 import ComicRight from "./ComicRight/ComicRight";
 
 import Banner from "./ComicLeft/Banner/Banner";
-import PricingAndPromotion from "./ComicLeft/PricingAndPromotion/PricingAndPromotion";
 import Chapters from "./ComicLeft/Chapters/Chapters";
 import About from "./ComicRight/About/About";
 import Related from "./ComicRight/Related/Related";
 import Comments from "./ComicRight/Comments/Comments";
 import Connect from "./ComicRight/Connect/Connect";
 
-export declare type typeIcon = "like" | "read" | "none";
-
-declare type reactType = {
-  type: typeIcon;
-  count: string | number;
-};
-
-export declare type bannerType = {
-  title: string;
-  author: string;
-  category: string;
-  totalChaper: number;
-  reactions: Array<reactType>;
-  tags: Array<string>;
-};
-
-const data: bannerType = {
-  title: "Kasane",
-  author: "By Kodansha",
-  category: "Drama",
-  totalChaper: 10,
-  reactions: [
-    { type: "read", count: "74.483" },
-    { type: "like", count: "15,863" },
-  ],
-  tags: ["18", "NEW", "TRENDING", "BESTSELLER", "MANGA"],
-};
+import PricingAndPromotion from "./ComicLeft/PricingAndPromotion/PricingAndPromotion";
 
 const prefix = "comic-detail";
 const prefixLeft = `${prefix}_left`;
@@ -45,7 +18,7 @@ const ComicDetail = () => {
   /**
    * Comic Left
    */
-  const renderBanner = <Banner className={prefixLeft} dataBanner={data} />;
+  const renderBanner = <Banner className={prefixLeft} />;
   const renderPricing = <PricingAndPromotion className={prefixLeft} />;
   const renderChapters = <Chapters className={prefixLeft} />;
 
