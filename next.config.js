@@ -9,6 +9,10 @@ const aliases = {
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  compiler: {
+    removeConsole: true,
+    reactRemoveProperties: true,
+  },
   webpack: (cf) => {
     const config = { ...cf };
 

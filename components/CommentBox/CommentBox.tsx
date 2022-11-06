@@ -24,8 +24,8 @@ const CommentBox: FC<CommentBoxProps> = ({ className, comment }) => {
         icon: <MessageOutlined size={20} />,
         content: totalReply,
       },
-    ].map((el) => (
-      <div key={`${el?.icon}`}>
+    ].map((el, index) => (
+      <div key={index}>
         <span className="icon mr-10">{el?.icon}</span>
 
         <span className="content mr-10">{el.content}</span>

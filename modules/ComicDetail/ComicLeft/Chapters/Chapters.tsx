@@ -26,7 +26,7 @@ const Chapters: FC<Chapters> = ({ className }) => {
     return dataLastRead.map((elm, index) => {
       return (
         <ChapterCard
-          key={`${elm.title}-${index}`}
+          key={index}
           modeCard="LAST_READ"
           chapter={elm}
           className="mb-24"
@@ -40,7 +40,7 @@ const Chapters: FC<Chapters> = ({ className }) => {
     return dataRelease.map((elm, index) => {
       return (
         <ChapterCard
-          key={`${elm.title}-${index}`}
+          key={index}
           modeCard="RELEASE"
           chapter={elm}
           className="mb-24"
@@ -53,8 +53,8 @@ const Chapters: FC<Chapters> = ({ className }) => {
     return [
       { icon: <BellOutlined width={16} height={16} /> },
       { icon: <SortAscendingOutlined width={16} height={16} /> },
-    ].map((el) => (
-      <div key={`${el?.icon}`} className="icon flex-center">
+    ].map((el, index) => (
+      <div key={index} className="icon flex-center">
         {el?.icon}
       </div>
     ));
